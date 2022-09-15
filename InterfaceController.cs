@@ -48,16 +48,16 @@ public class InterfaceController : MonoBehaviour
 
     public void YourButton1()
     {
-        // value1 += 240;
+        value1 += 240;
     }
 
     public void YourButton2()
     {
-        // value2 = value1 - 30;
+        value2 = value1 - 30;
     }
 
     public void YourButton3()
     {
-        // value2 *= 2;
+        value2 *= 2;
     }
 }
