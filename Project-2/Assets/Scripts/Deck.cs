@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CardGameGoFish
-{
     class Deck
     {
         private List<Card> cards;
@@ -102,4 +100,3 @@ namespace CardGameGoFish
             cards.Sort(new CardComparer_byValue());
         }
     }
-}

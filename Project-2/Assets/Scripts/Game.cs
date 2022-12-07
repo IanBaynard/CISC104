@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Game
+public class Game : MonoBehaviour
 {
     private List<Player> players;
     private Dictionary<Values, Player> matches;

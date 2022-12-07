@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace CardGameGoFish
-{
-    public partial class Form1 : Form
+    class Form1
     {
         public Form1()
         {
@@ -14,21 +12,21 @@ namespace CardGameGoFish
 
         private Game game;
 
-        private void buttonStart_Click(object sender, EventArgs e)
+        private void buttonStart_Click()
         {
             if (String.IsNullOrEmpty(textName.Text))
             {
                 MessageBox.Show("Enter your name", "The game can not be started yet.");
                 return;
             }
-            game = new Game(textName.Text, new List<string> { "John", "Bart" }, textProgress);
+            game = new Game(textName.Text, new List<string> { "Player 1", "Player 2" }, textProgress);
             buttonStart.Enabled = false;
             textName.Enabled = false;
             buttonAsk.Enabled = true;
             UpdateForm();
         }
 
-        private void buttonAsk_Click(object sender, EventArgs e)
+        private void buttonAsk_Click()
         {
             textProgress.Text = "";
             if (listHand.SelectedIndex < 0)
@@ -57,4 +55,3 @@ namespace CardGameGoFish
             textProgress.ScrollToCaret();
         }
     }
-}
